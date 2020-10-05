@@ -13,7 +13,7 @@ struct ReplicatingNode: Hashable {
   var timestamp = Date().timeIntervalSinceReferenceDate
   var id = UUID()
 
-  // MARK: -  Mutating methods
+  // MARK: - Mutating methods
   mutating func merge(with replicatingNode: ReplicatingNode) -> ReplicatingNode {
     let lwwNode = max(self, replicatingNode)
     let newNode = ReplicatingNode(value: lwwNode.value, timestamp: lwwNode.timestamp, id: lwwNode.id)

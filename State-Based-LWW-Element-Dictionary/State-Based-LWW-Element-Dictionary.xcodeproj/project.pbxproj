@@ -15,6 +15,8 @@
 		639C694B252B0A3700545701 /* LWWElementDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C694A252B0A3700545701 /* LWWElementDictionary.swift */; };
 		63E8E8AF252B3E2B0030630D /* AddOnlySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8E8AE252B3E2B0030630D /* AddOnlySet.swift */; };
 		63E8E8B5252B40090030630D /* AddOnlySetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8E8B4252B40090030630D /* AddOnlySetTests.swift */; };
+		63E8E8B9252B43FA0030630D /* ReplicatableSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8E8B8252B43FA0030630D /* ReplicatableSet.swift */; };
+		63E8E8BD252B50DD0030630D /* ReplicatableDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8E8BC252B50DD0030630D /* ReplicatableDictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		639C694A252B0A3700545701 /* LWWElementDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWWElementDictionary.swift; sourceTree = "<group>"; };
 		63E8E8AE252B3E2B0030630D /* AddOnlySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnlySet.swift; sourceTree = "<group>"; };
 		63E8E8B4252B40090030630D /* AddOnlySetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnlySetTests.swift; sourceTree = "<group>"; };
+		63E8E8B8252B43FA0030630D /* ReplicatableSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicatableSet.swift; sourceTree = "<group>"; };
+		63E8E8BC252B50DD0030630D /* ReplicatableDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicatableDictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				639C694A252B0A3700545701 /* LWWElementDictionary.swift */,
 				6399B2A0252B109200B65743 /* ReplicatingNode.swift */,
 				63E8E8AE252B3E2B0030630D /* AddOnlySet.swift */,
+				63E8E8B8252B43FA0030630D /* ReplicatableSet.swift */,
+				63E8E8BC252B50DD0030630D /* ReplicatableDictionary.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,9 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E8E8B9252B43FA0030630D /* ReplicatableSet.swift in Sources */,
 				639C694B252B0A3700545701 /* LWWElementDictionary.swift in Sources */,
 				6399B2A1252B109200B65743 /* ReplicatingNode.swift in Sources */,
 				63E8E8AF252B3E2B0030630D /* AddOnlySet.swift in Sources */,
+				63E8E8BD252B50DD0030630D /* ReplicatableDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
