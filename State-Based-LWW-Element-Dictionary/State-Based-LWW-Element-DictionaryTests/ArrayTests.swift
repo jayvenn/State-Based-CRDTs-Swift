@@ -35,10 +35,32 @@ final class ArrayTests: XCTestCase {
     XCTAssertEqual(mergedNode.value, nodeA.value)
   }
   func testAssociative() {
-    var nodeA = ReplicatingNode(value: "a")
+    // (A + B) + C = A + (B + C)
+    var nodeA = ReplicatingNode(value: "a", timestamp: 1)
+    var nodeB = ReplicatingNode(value: "b", timestamp: 2)
+    let nodeC = ReplicatingNode(value: "c", timestamp: 3)
+    // (A + B) + C
+    var lhsNode = nodeA.merge(with: nodeB)
+    _ = lhsNode.merge(with: nodeC)
+    // A + (B + C)
+    var rhsNode = nodeB.merge(with: nodeC)
+    _ = rhsNode.merge(with: nodeA)
+    XCTAssertEqual(lhsNode.value, rhsNode.value)
   }
   func testCommutative() {
+    // A + B = B + C
+    var nodeA = ReplicatingNode(value: "a", timestamp: 1)
+    var nodeB = ReplicatingNode(value: "b", timestamp: 2)
+    let nodeC = nodeA.merge(with: nodeB)
+    let nodeD = nodeB.merge(with: nodeA)
+    XCTAssertEqual(nodeC.value, nodeD.value)
   }
   func testIdempotent() {
+    var nodeA = ReplicatingNode(value: "a", timestamp: 1)
+    let nodeB = ReplicatingNode(value: "b", timestamp: 2)
+    var nodeC = nodeA.merge(with: nodeB)
+    var nodeD = nodeC.merge(with: nodeB)
+    let nodeE = nodeD.merge(with: nodeA)
+    XCTAssertEqual(nodeB.value, nodeE.value)
   }
 }

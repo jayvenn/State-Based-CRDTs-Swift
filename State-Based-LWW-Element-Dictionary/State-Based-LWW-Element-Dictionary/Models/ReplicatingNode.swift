@@ -18,7 +18,7 @@ struct ReplicatingNode: Comparable {
 
   mutating func merge(with replicatingNode: ReplicatingNode) -> ReplicatingNode {
     let lwwNode = max(self, replicatingNode)
-    let newNode = ReplicatingNode(value: lwwNode.value)
+    let newNode = ReplicatingNode(value: lwwNode.value, timestamp: lwwNode.timestamp, id: lwwNode.id)
     self = newNode
     return newNode
   }
@@ -28,4 +28,11 @@ struct ReplicatingNode: Comparable {
   // Commutative: 2 + 3 + 4 = 4 + 3 + 2
   // Is Idempotent: max(x, 10)
   // Not idempotent: 3 + 1 ≠ 3 + 1 + 1
+}
+
+// MARK: - CustomStringConvertible
+extension ReplicatingNode: CustomStringConvertible {
+  var description: String {
+    "\(value) created at \(timestamp)"
+  }
 }
