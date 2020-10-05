@@ -14,13 +14,11 @@ struct LWWElementDictionary {
 
   // MARK: - Operations
   func insert(_ value: String, at index: Int) {
-
   }
 
   func remove() {
   }
 
   func merge() {
-
   }
 }
