@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6399B2A1252B109200B65743 /* ReplicatingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399B2A0252B109200B65743 /* ReplicatingNode.swift */; };
-		6399B2A7252B17A600B65743 /* ReplicatingRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399B2A6252B17A600B65743 /* ReplicatingRegister.swift */; };
-		6399B2AD252B19EE00B65743 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399B2AC252B19EE00B65743 /* ArrayTests.swift */; };
+		6399B2AD252B19EE00B65743 /* ReplicatingNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399B2AC252B19EE00B65743 /* ReplicatingNodeTests.swift */; };
 		639C6933252B090100545701 /* State_Based_LWW_Element_Dictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639C6929252B090100545701 /* State_Based_LWW_Element_Dictionary.framework */; };
 		639C6938252B090100545701 /* StateBasedLWWElementDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C6937252B090100545701 /* StateBasedLWWElementDictionaryTests.swift */; };
 		639C693A252B090100545701 /* State_Based_LWW_Element_Dictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 639C692C252B090100545701 /* State_Based_LWW_Element_Dictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		639C694B252B0A3700545701 /* LWWElementDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C694A252B0A3700545701 /* LWWElementDictionary.swift */; };
+		63E8E8AF252B3E2B0030630D /* AddOnlySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8E8AE252B3E2B0030630D /* AddOnlySet.swift */; };
+		63E8E8B5252B40090030630D /* AddOnlySetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8E8B4252B40090030630D /* AddOnlySetTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,8 +29,7 @@
 
 /* Begin PBXFileReference section */
 		6399B2A0252B109200B65743 /* ReplicatingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicatingNode.swift; sourceTree = "<group>"; };
-		6399B2A6252B17A600B65743 /* ReplicatingRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicatingRegister.swift; sourceTree = "<group>"; };
-		6399B2AC252B19EE00B65743 /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
+		6399B2AC252B19EE00B65743 /* ReplicatingNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicatingNodeTests.swift; sourceTree = "<group>"; };
 		639C6929252B090100545701 /* State_Based_LWW_Element_Dictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = State_Based_LWW_Element_Dictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		639C692C252B090100545701 /* State_Based_LWW_Element_Dictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = State_Based_LWW_Element_Dictionary.h; sourceTree = "<group>"; };
 		639C692D252B090100545701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +37,8 @@
 		639C6937252B090100545701 /* StateBasedLWWElementDictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBasedLWWElementDictionaryTests.swift; sourceTree = "<group>"; };
 		639C6939252B090100545701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		639C694A252B0A3700545701 /* LWWElementDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWWElementDictionary.swift; sourceTree = "<group>"; };
+		63E8E8AE252B3E2B0030630D /* AddOnlySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnlySet.swift; sourceTree = "<group>"; };
+		63E8E8B4252B40090030630D /* AddOnlySetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnlySetTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,8 @@
 			children = (
 				639C6937252B090100545701 /* StateBasedLWWElementDictionaryTests.swift */,
 				639C6939252B090100545701 /* Info.plist */,
-				6399B2AC252B19EE00B65743 /* ArrayTests.swift */,
+				6399B2AC252B19EE00B65743 /* ReplicatingNodeTests.swift */,
+				63E8E8B4252B40090030630D /* AddOnlySetTests.swift */,
 			);
 			path = "State-Based-LWW-Element-DictionaryTests";
 			sourceTree = "<group>";
@@ -109,7 +112,7 @@
 			children = (
 				639C694A252B0A3700545701 /* LWWElementDictionary.swift */,
 				6399B2A0252B109200B65743 /* ReplicatingNode.swift */,
-				6399B2A6252B17A600B65743 /* ReplicatingRegister.swift */,
+				63E8E8AE252B3E2B0030630D /* AddOnlySet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,8 +248,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				639C694B252B0A3700545701 /* LWWElementDictionary.swift in Sources */,
-				6399B2A7252B17A600B65743 /* ReplicatingRegister.swift in Sources */,
 				6399B2A1252B109200B65743 /* ReplicatingNode.swift in Sources */,
+				63E8E8AF252B3E2B0030630D /* AddOnlySet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +258,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				639C6938252B090100545701 /* StateBasedLWWElementDictionaryTests.swift in Sources */,
-				6399B2AD252B19EE00B65743 /* ArrayTests.swift in Sources */,
+				6399B2AD252B19EE00B65743 /* ReplicatingNodeTests.swift in Sources */,
+				63E8E8B5252B40090030630D /* AddOnlySetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

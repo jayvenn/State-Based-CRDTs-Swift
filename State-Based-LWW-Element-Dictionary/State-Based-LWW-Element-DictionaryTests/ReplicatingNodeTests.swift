@@ -1,5 +1,5 @@
 //
-//  ArrayTests.swift
+//  ReplicatingNode.swift
 //  State-Based-LWW-Element-DictionaryTests
 //
 //  Created by Jayven Nhan on 10/5/20.
@@ -9,7 +9,7 @@ import XCTest
 @testable import State_Based_LWW_Element_Dictionary
 
 final class ArrayTests: XCTestCase {
-  func testInitialization() {
+  func testInitializationWithValue() {
     let value = "value"
     let node = ReplicatingNode(value: value)
     XCTAssertEqual(node.value, value)
@@ -62,5 +62,11 @@ final class ArrayTests: XCTestCase {
     var nodeD = nodeC.merge(with: nodeB)
     let nodeE = nodeD.merge(with: nodeA)
     XCTAssertEqual(nodeB.value, nodeE.value)
+  }
+  func testCustomStringConvertible() {
+    let value = "a"
+    let timestamp: TimeInterval = 1
+    let nodeA = ReplicatingNode(value: value, timestamp: timestamp)
+    XCTAssertEqual(nodeA.description, "\(value) created at \(timestamp)")
   }
 }

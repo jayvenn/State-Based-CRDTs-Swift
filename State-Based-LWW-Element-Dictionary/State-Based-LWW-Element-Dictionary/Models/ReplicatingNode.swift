@@ -7,27 +7,26 @@
 
 import Foundation
 
-struct ReplicatingNode: Comparable {
+struct ReplicatingNode: Hashable {
+  // MARK: - Properties
   var value: String
   var timestamp = Date().timeIntervalSinceReferenceDate
   var id = UUID()
 
-  static func < (lhs: ReplicatingNode, rhs: ReplicatingNode) -> Bool {
-    lhs.timestamp < rhs.timestamp
-  }
-
+  // MARK: -  Mutating methods
   mutating func merge(with replicatingNode: ReplicatingNode) -> ReplicatingNode {
     let lwwNode = max(self, replicatingNode)
     let newNode = ReplicatingNode(value: lwwNode.value, timestamp: lwwNode.timestamp, id: lwwNode.id)
     self = newNode
     return newNode
   }
+}
 
-  // MATH
-  // Associative: 1+(2+3) = (1+2)+3
-  // Commutative: 2 + 3 + 4 = 4 + 3 + 2
-  // Is Idempotent: max(x, 10)
-  // Not idempotent: 3 + 1 ≠ 3 + 1 + 1
+// MARK: - Comparable
+extension ReplicatingNode: Comparable {
+  static func < (lhs: ReplicatingNode, rhs: ReplicatingNode) -> Bool {
+    lhs.timestamp < rhs.timestamp
+  }
 }
 
 // MARK: - CustomStringConvertible
